@@ -43,30 +43,24 @@
                 "ca32c2fe-31ac-4633-b7fd-709258434d28",
                 "62dba52c-2f70-4047-aa4d-bea31c9de7de",
                 "3d32136e-2cf5-4f21-9894-513c5e6f4d2f",
+                "dbe13723-be4a-4dfd-90d7-424cfa045998",
                 "e204fafe-e634-4c1f-a472-5e4d3bdfc67a",
                 "71c5313c-0bd0-44a1-b518-3af62412ca9f",
-                "cdab37b9-e57d-4eff-9a35-df0e0a456467",
+                "550d8317-fd71-4667-a175-696d10c6e3d7",
                 "8ca2fdb1-6a0a-4f44-84b6-b00bf012f1e3",
                 "8baa2115-8763-4805-b74a-3388f87afddc",
-                "10ec7178-9a07-42eb-9220-bc267903edeb"
+                "10ec7178-9a07-42eb-9220-bc267903edeb",
+                "522e93c0-d262-4712-892c-0f7747261d7b",
+                "a0cff786-159c-4d5d-8f2f-a1f64e2871cd"
               ],
               "containedElements": [
                 "759de57b-be99-45ca-be59-514d39620101",
                 "a524ff29-8d43-414a-a098-7ec91f0d1b02",
                 "3a52230f-4084-4a96-a059-120a91776e58",
-                "293480dd-2075-4029-af31-9acf1c1a2a37",
-                "df11599b-8d9f-4262-b5fe-daacefb23989",
                 "d545f783-f500-466a-943c-7d987672b88c",
                 "c449edf9-29fb-444e-9b3d-0787d0175bc4",
                 "e39f7008-8c61-4d32-a4fd-1cff1df00110"
               ]
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -83,8 +77,8 @@
                 "text": "Route Planner"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -181,12 +175,60 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "d2e22b09-88e4-4591-ab35-d6f8e8270918",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Denial of service",
+                  "description": "A high volume of requests causes an out-of-memory erro",
+                  "mitigation": "Spread trrafic throughout multiple servers",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": ""
+                },
+                {
+                  "id": "e824853b-0eb9-48ef-baed-88a632fd6649",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Spoofing",
+                  "description": "Malicious actor makes their own route planner to send cars on wild goosechases",
+                  "mitigation": "Create unique hidden identifiers to check to see if correct route planner is used",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                },
+                {
+                  "id": "fbab4d64-94d2-4762-bcbc-3c0a6e84e24e",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Repudiation",
+                  "description": "Requests to start routes are not logged",
+                  "mitigation": "Start logging reqeusts to routes",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 0,
+                "repudiation": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 1,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -203,8 +245,8 @@
                 "text": "Car Software"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -301,12 +343,60 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "c610a5e5-4966-448e-a6a7-8ba03be841e8",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering",
+                  "description": "Malicious actor uploads their own software into the car",
+                  "mitigation": "Failsafe to check if correct software is in the car",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": ""
+                },
+                {
+                  "id": "a7dd7ca1-7b94-4d38-b255-8951b3c98d33",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Spoofing",
+                  "description": "Malicious actor spoofs that the car they are in should be on a route that was not requested by the route planner",
+                  "mitigation": "Only take routes from route planner",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
+                },
+                {
+                  "id": "d4456093-4e77-4e5e-ab81-98657ef2bf49",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Repudiation",
+                  "description": "Car breaks down",
+                  "mitigation": "Repair Man",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 11,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 1,
+                "repudiation": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             },
             "children": []
           },
@@ -324,8 +414,8 @@
                 "text": "Payment Processing"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -422,19 +512,54 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "351dd549-c85e-45b4-8f2e-6e17a6909eae",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Spoofing",
+                  "description": "Malicious actors could provide an invalid payment process like a bad cheque",
+                  "mitigation": "Check to see if payment process is not in any known spoofed payment databases",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 17,
+                  "score": ""
+                },
+                {
+                  "id": "4867f178-e7c6-4836-9bc5-116d04f8d644",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Repudiation",
+                  "description": "Payment proccess doesn't log all transactions",
+                  "mitigation": "start logging that",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 18,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 0,
+                "repudiation": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             },
             "children": []
           },
           {
             "position": {
               "x": 250,
-              "y": 430
+              "y": 560
             },
             "size": {
               "width": 220,
@@ -445,11 +570,13 @@
                 "text": "User's Confidential Information"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -546,13 +673,33 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "7c5c8137-5e42-4808-a4d9-281d2faedfa1",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering",
+                  "description": "Database access exposed to public network",
+                  "mitigation": "Start hiding user's private information behind another trust boundary",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 14,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             }
           },
           {
@@ -569,8 +716,8 @@
                 "text": "Car"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -667,9 +814,27 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "744fcca0-766c-4c78-acf6-a5b674e59e6e",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Spoofing",
+                  "description": "Malicious actors could spoof their own vehicles as part of the system",
+                  "mitigation": "Keep track of all known authorized vehicles at all times",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 19,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
             }
           },
           {
@@ -809,8 +974,8 @@
           },
           {
             "position": {
-              "x": 575,
-              "y": 2
+              "x": 580,
+              "y": 0
             },
             "size": {
               "width": 120,
@@ -821,11 +986,13 @@
                 "text": "Maps"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -922,13 +1089,33 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "41bc8827-7959-48eb-8dcb-10aeff911755",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering",
+                  "description": "Bad maps uploaded to database",
+                  "mitigation": "Regularly check to see if database is comprimised",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 8,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             }
           },
           {
@@ -1173,7 +1360,9 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "b58a0ff4-0579-4484-94c3-b63240ed8933"
+              ]
             },
             "labels": [
               "Saved Payment Type"
@@ -1375,7 +1564,9 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "b58a0ff4-0579-4484-94c3-b63240ed8933"
+              ]
             },
             "labels": [
               "Sets Values"
@@ -1422,9 +1613,7 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": [
-                "b58a0ff4-0579-4484-94c3-b63240ed8933"
-              ]
+              "trustBoundaryIds": []
             },
             "labels": [
               "Data Flow"
@@ -1788,7 +1977,9 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "b58a0ff4-0579-4484-94c3-b63240ed8933"
+              ]
             },
             "labels": [
               "Write"
@@ -1835,7 +2026,9 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "b58a0ff4-0579-4484-94c3-b63240ed8933"
+              ]
             },
             "labels": [
               "Membership Status"
@@ -1858,8 +2051,8 @@
           },
           {
             "position": {
-              "x": 695,
-              "y": 390
+              "x": 895,
+              "y": 440
             },
             "size": {
               "width": 120,
@@ -1870,11 +2063,13 @@
                 "text": "Car Parameters"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1971,13 +2166,33 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "ab766afe-3dd3-4168-82d0-502186c4bc1c",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering",
+                  "description": "Malicious actors could import their own parameters",
+                  "mitigation": "Provide hard limits safe limits that the cars are willing to approve",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 12,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 2,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             }
           },
           {
@@ -1994,8 +2209,8 @@
                 "text": "Maintanace"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -2092,9 +2307,27 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "5b7a43c0-5661-44e2-ad45-e39f7aa9ff94",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Spoofing",
+                  "description": "Malicious actor could spoof their way into this role to tamper with car parameters",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 13,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
             }
           },
           {
@@ -2236,13 +2469,14 @@
                 "text": "Account Management"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 14,
             "ports": {
               "groups": {
                 "top": {
@@ -2326,7 +2560,6 @@
               ]
             },
             "id": "e39f7008-8c61-4d32-a4fd-1cff1df00110",
-            "zIndex": 14,
             "data": {
               "type": "tm.Process",
               "name": "Account Management",
@@ -2334,12 +2567,47 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "b36161e5-2cbd-4a40-bb7a-dbf276d6c1fe",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Spoofing",
+                  "description": "User's could provide false personal information",
+                  "mitigation": "Require Goverment ID",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 15,
+                  "score": ""
+                },
+                {
+                  "id": "c5045659-24e2-49b5-9ab1-d7bc5aa3f3e1",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Repudiation",
+                  "description": "Account manager does not log when a user deletes their profile",
+                  "mitigation": "Start logging it",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 16,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 0,
+                "repudiation": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           }
         ]
@@ -2347,6 +2615,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "Me",
-    "threatTop": 1
+    "threatTop": 19
   }
 }
