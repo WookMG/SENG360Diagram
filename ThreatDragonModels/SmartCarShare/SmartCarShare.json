@@ -60,6 +60,13 @@
                 "c449edf9-29fb-444e-9b3d-0787d0175bc4",
                 "e39f7008-8c61-4d32-a4fd-1cff1df00110"
               ]
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -679,8 +686,8 @@
                 "text": "Customer"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -777,9 +784,27 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "32f4d0e4-0cc1-418d-8c18-48171f931d93",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Spoofing",
+                  "description": "A malicious actor could obtain the login credentials of another customer / admin and gain their confidetial data / privilages",
+                  "mitigation": "Implement 2FA in account security",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
             }
           },
           {
@@ -1957,7 +1982,7 @@
           },
           {
             "position": {
-              "x": 540,
+              "x": 530,
               "y": 440
             },
             "size": {
@@ -2322,6 +2347,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "Me",
-    "threatTop": 0
+    "threatTop": 1
   }
 }
